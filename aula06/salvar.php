@@ -14,6 +14,7 @@ fwrite($arquivo , $estado . ",");
 fwrite($arquivo , $email . "\n");
 
 
+
 fclose($arquivo);
 
 header("location:form.php?mensagem=salvo");
