@@ -11,7 +11,7 @@
 <body>
     <h1>Cadastro de Cliente</h1>
     <form method="post" action="salvar.php">
-        Nome: <input name="nome" maxlength="50"><br>
+        Nome: <input name="nome" maxlength="50" required><br>
         Telefone: <input type="tel" maxlength="15" name="telefone" required><br>
         Cidade : <input name="cidade" maxlength="40"><br>
         Email : <input name="email" maxlength="100"><br>
@@ -45,9 +45,18 @@
             <option value="SE">Sergipe</option>
             <option value="TO">Tocantins</option>
             <option value="EX">Estrangeiro</option>
+        </select><br>
 
-            <button type="submit">Salvar cliente</button>
+        <button type="submit">Salvar cliente</button>
     </form>
+    <script>
+        <?php
+        $msg = $_GET["mensagem"] ?? "";
+        if($msg == "salvo"){
+            echo "alert('cliente salvo com sucesso!')";
+        }
+        ?>
+    </script>
 </body>
 
 </html>

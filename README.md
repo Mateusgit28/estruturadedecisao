@@ -8,4 +8,4 @@
 - [x] tornar o campo nome e telefone obrigatório
 - [x] ajustar a qtd de caracteres do telefone para 15
 - [ ] listagem dos clientes na tela
-- [ ] mostrar mensagem quando o cliente for cadastrado
+- [x] mostrar mensagem quando o cliente for cadastrado
