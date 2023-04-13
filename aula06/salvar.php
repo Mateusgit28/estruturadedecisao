@@ -13,7 +13,7 @@ fwrite($arquivo , $telefone . ",");
 fwrite($arquivo , $estado . ",");
 fwrite($arquivo , $email . "\n");
 
-
+    
 
 fclose($arquivo);
 
