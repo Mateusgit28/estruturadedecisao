@@ -34,15 +34,27 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-12 text-center"><h1>Jogos em Destaque</h1></div>
-      <div class="col-12 text-center"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, debitis optio. Sit reiciendis consequuntur et, culpa dignissimos voluptatem ex. Earum labore sed reiciendis. Quis dolores fuga, recusandae cum accusantium ea!</p></div>
+      <div class="col-12 text-center">
+        <h1>Jogos em Destaque</h1>
+      </div>
+      <div class="col-12 text-center">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi, debitis optio. Sit reiciendis consequuntur et, culpa dignissimos voluptatem ex. Earum labore sed reiciendis. Quis dolores fuga, recusandae cum accusantium ea!</p>
+      </div>
       <div class="row">
-        <div class="col-3 text-center">
-          <img src="img/paydayy.png" class="img-fluid">
-          <h2>Nome do jogo</h2>
-          <a href="nomedojogo.php" class="btn btn-primary">VER MAIS</a>
-        </div>
-        <div class="col-3 text-center">
+
+        <?php
+        for ($i = 0; $i < 8; $i++) :
+        ?>
+          <div class="col-md-3 text-center mb-4">
+            <img src="img/farcry.jpg" class="img-fluid">
+            <h2>Nome do jogo</h2>
+            <a href="nomedojogo.php" class="btn btn-primary">VER MAIS</a>
+          </div>
+        <?php
+        endfor;
+        ?>
+
+        <!-- <div class="col-3 text-center">
           <img src="img/pung.jpg" class="img-fluid">
           <h2>Nome do jogo</h2>
           <a href="nomedojogo.php" class="btn btn-primary">VER MAIS</a>
@@ -56,11 +68,39 @@
           <img src="img/warzone.jpg" class="img-fluid">
           <h2>Nome do jogo</h2>
           <a href="nomedojogo.php" class="btn btn-primary">VER MAIS</a>
-        </div>
+        </div> -->
       </div>
     </div>
+    <div class="row mt-5">
+      <div class="col-12">
+        <h2>Entre em contato</h2>
+      </div>
+      <div class="col-12">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti cupiditate maxime ducimus neque earum magnam similique necessitatibus optio! Voluptas, nisi iusto enim asperiores tenetur dolorem dolores maiores quod quam labore.</p>
+      </div>
+    </div>
+    <div class="row">
+      <form action="inserir-contato.php" method="post">
+        <div class="mb-2">
+          <input type="text" class="form-control" name="nome" placeholder="nome">
+        </div>
+        <div class="mb-2">
+          <input type="tel" class="form-control" name="nome" placeholder="Telefone">
+        </div>
+        <div class="mb-2">
+          <div class="mb-2">
 
-  
+            <textarea class="form-control" name="duvida" placeholder="Duvida" rows="4"></textarea>
+          </div>
+        </div>
+        <div class="mb-2 text-center">
+          <button type="submit" class="btn btn-success w-25">ENVIAR</button>
+        </div>
+
+      </form>
+    </div>
+
+
   </div>
 
 
