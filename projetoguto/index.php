@@ -43,18 +43,47 @@
       <div class="row">
 
         <?php
-        for ($i = 0; $i < 8; $i++) :
+        $servidor_bd = "127.0.0.1";
+        $usuario_bd = "root";
+        $senha_bd = "";
+        $banco_de_dados = "delivery_jogos_novo";
+        $conexao = mysqli_connect($servidor_bd, $usuario_bd, $senha_bd, $banco_de_dados);
+
+        $sql_buscar = "select * from jogo";
+
+        $todos_os_jogos = mysqli_query($conexao, $sql_buscar);
+
+        while ($um_jogo = mysqli_fetch_assoc($todos_os_jogos)) :
         ?>
           <div class="col-md-3 text-center mb-4">
-            <img src="img/farcry.jpg" class="img-fluid">
-            <h2>Nome do jogo</h2>
-            <a href="nomedojogo.php" class="btn btn-primary">VER MAIS</a>
+            <img src="<?php echo $um_jogo["foto"]; ?>" class="img-fluid" style="object-fit: cover; height: 150px; width: 100%; object-position: top center;">
+            <?php
+            $cor = "";
+            if (strtoupper($um_jogo["Categorias"]) == "Ação") {
+              $cor = "red";
+            } else if (strtoupper($um_jogo["Categorias"]) == "Aventura") {
+              $cor = "green";
+            }
+            ?>
+            <h6 class="mt-3 mb-3 "><?php echo $um_jogo["Categorias"];  ?></h6>
+            <h5 class="mt-3 mb-3 "><?php echo $um_jogo["titulo"]; ?></h5>
+
+            <a href="<?php echo $um_jogo["video"]; ?> " class="btn btn-outline-primary">VER MAIS</a>
           </div>
         <?php
-        endfor;
+        endwhile;
         ?>
 
-        <!-- <div class="col-3 text-center">
+        
+
+        <?php
+
+
+        ?>
+
+      </div>
+
+      <!-- <div class="col-3 text-center">
           <img src="img/pung.jpg" class="img-fluid">
           <h2>Nome do jogo</h2>
           <a href="nomedojogo.php" class="btn btn-primary">VER MAIS</a>
@@ -69,36 +98,36 @@
           <h2>Nome do jogo</h2>
           <a href="nomedojogo.php" class="btn btn-primary">VER MAIS</a>
         </div> -->
-      </div>
     </div>
-    <div class="row mt-5">
-      <div class="col-12">
-        <h2>Entre em contato</h2>
-      </div>
-      <div class="col-12">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti cupiditate maxime ducimus neque earum magnam similique necessitatibus optio! Voluptas, nisi iusto enim asperiores tenetur dolorem dolores maiores quod quam labore.</p>
-      </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-12">
+      <h2>Entre em contato</h2>
     </div>
-    <div class="row">
-      <form action="inserir-contato.php" method="post">
+    <div class="col-12">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti cupiditate maxime ducimus neque earum magnam similique necessitatibus optio! Voluptas, nisi iusto enim asperiores tenetur dolorem dolores maiores quod quam labore.</p>
+    </div>
+  </div>
+  <div class="row">
+    <form action="inserir-contato.php" method="post">
+      <div class="mb-2">
+        <input type="text" class="form-control" name="nome" placeholder="nome">
+      </div>
+      <div class="mb-2">
+        <input type="tel" class="form-control" name="nome" placeholder="Telefone">
+      </div>
+      <div class="mb-2">
         <div class="mb-2">
-          <input type="text" class="form-control" name="nome" placeholder="nome">
-        </div>
-        <div class="mb-2">
-          <input type="tel" class="form-control" name="nome" placeholder="Telefone">
-        </div>
-        <div class="mb-2">
-          <div class="mb-2">
 
-            <textarea class="form-control" name="duvida" placeholder="Duvida" rows="4"></textarea>
-          </div>
+          <textarea class="form-control" name="duvida" placeholder="Duvida" rows="4"></textarea>
         </div>
-        <div class="mb-2 text-center">
-          <button type="submit" class="btn btn-success w-25">ENVIAR</button>
-        </div>
+      </div>
+      <div class="mb-2 text-center">
+        <button type="submit" class="btn btn-success w-25">ENVIAR</button>
+      </div>
 
-      </form>
-    </div>
+    </form>
+  </div>
 
 
   </div>
