@@ -72,6 +72,7 @@
           </div>
         <?php
         endwhile;
+        mysqli_close($conexao);
         ?>
 
         

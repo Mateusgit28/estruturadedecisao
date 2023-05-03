@@ -12,8 +12,8 @@
         
       </ul>
       <form action="login.php" method="post" class="d-flex">
-        <input class="form-control me-2" type="email" placeholder="email" >
-        <input class="form-control me-2" type="senha" placeholder="senha" >
+        <input class="form-control me-2" type="email" name="email" placeholder="email" >
+        <input class="form-control me-2" type="senha" name ="senha"placeholder="senha" >
         <button class="btn btn-outline-success bt-roxo me-2" type="submit">Entrar</button>
 
         <a href="novo-usuario.php" class="btn btn-outline-primary" >Cadastrar</a>
