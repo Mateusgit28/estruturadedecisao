@@ -17,6 +17,22 @@ include "menu.php";
                 <input name="senha" type="password" required placeholder="Senha"><br>
                 <button type="submit" class="btn btn-success">Salvar usuário</button>
 
+
+                <div class="row">
+                    <div class="col-12">
+
+                        <?php
+
+                        $mensagem = $_GET["msg"] ?? "";
+                        if ($mensagem == "sucesso") {
+                            echo "<div class ='col-3 mt-3 alert alert-success' role='alert' > Usuário cadastrado com sucesso!.</div>";
+                        }
+                        ?>
+                    </div>
+
+                </div>
+
+
             </form>
         </div>
     </div>

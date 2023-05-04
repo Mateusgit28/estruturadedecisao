@@ -8,7 +8,7 @@ $nome = $_POST['nome'];
 
 include "conexao.php";
 
-$sql_buscar_usuario = "INSERT INTO usuario (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+$sql_buscar_usuario = "INSERT INTO usuario (nome, email, senha) VALUES ('$nome', '$email','" .  md5($senha) . "')";
 
 $todos_os_jogos = mysqli_query($conexao, $sql_buscar_usuario);
 
