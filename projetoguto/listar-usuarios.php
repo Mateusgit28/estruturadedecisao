@@ -11,7 +11,7 @@ include "menu-sistema.php";
     </div>
     <div class="row">
         <div class="col">
-            <table border="1">
+            <table class="table table - white table-sm">
                 <tr>
                     <td>Id</td>
                     <td>Nome</td>
@@ -29,6 +29,7 @@ include "menu-sistema.php";
                         <td> <?php echo $um_usuario["id"]; ?> </td>
                         <td> <?php echo $um_usuario["nome"]; ?> </td>
                         <td> <?php echo $um_usuario["email"]; ?> </td>
+                        <td><img src="img/delete.png" width="20"></td>
                         
                     </tr>
                 <?php

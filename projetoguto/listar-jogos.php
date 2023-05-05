@@ -10,7 +10,7 @@ include "menu-sistema.php";
     </div>
     <div class="row">
         <div class="col">
-            <table border="1">
+            <table class="table table - white table-sm">
                 <tr>
                     <td>Código</td>
                     <td>Título</td>
@@ -27,7 +27,11 @@ include "menu-sistema.php";
                         <td><?php echo $um_jogo["id"]; ?> </td>
                         <td><?php echo $um_jogo["titulo"]; ?> </td>
                         <td><?php echo $um_jogo["Categorias"]; ?> </td>
-                        <td>Excluir Jogo</td>
+                        <td>
+                            <a href="excluir-jogos.php?id=<?php echo $um_jogo["id"]; ?>">
+                                <img src="img/delete.png" width="20">
+                            </a>
+                        </td>
                     </tr>
                 <?php
 
