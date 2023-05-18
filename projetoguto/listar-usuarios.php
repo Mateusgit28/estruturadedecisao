@@ -17,7 +17,7 @@ include "menu-sistema.php";
                     <td>Nome</td>
                     <td>Email</td>
                     <td>Ações</td>
-                    
+
                 </tr>
                 <?php
                 include "conexao.php";
@@ -30,7 +30,11 @@ include "menu-sistema.php";
                         <td> <?php echo $um_usuario["nome"]; ?> </td>
                         <td> <?php echo $um_usuario["email"]; ?> </td>
                         <td><img src="img/delete.png" width="20"></td>
-                        
+
+                        <td><a href="ver-jogo.php?id=<?php echo $um_usuario["nome"]; ?>">VER</a>
+                        <a href="editar-jogo.php?id=<?php echo $um_usuario["email"]; ?>">EDITAR</a></td>
+
+
                     </tr>
                 <?php
 

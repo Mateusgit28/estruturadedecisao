@@ -18,7 +18,7 @@ include "menu-sistema.php";
                     <td>Ações</td>
                 </tr>
                 <?php
-                include "conexao.php";
+                    include "conexao.php";
                 $sql_buscar = "select * from jogo";
                 $todos_os_jogos = mysqli_query($conexao, $sql_buscar);
                 while ($um_jogo = mysqli_fetch_assoc($todos_os_jogos)) :
@@ -31,6 +31,9 @@ include "menu-sistema.php";
                             <a href="excluir-jogos.php?id=<?php echo $um_jogo["id"]; ?>">
                                 <img src="img/delete.png" width="20">
                             </a>
+                            <a href="ver-jogo.php?id=<?php echo $um_jogo["id"];?>">VER</a>
+                            <a href="editar-jogo.php?id=<?php echo $um_jogo["id"];?>">EDITAR</a>
+                        
                         </td>
                     </tr>
                 <?php
